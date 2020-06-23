@@ -1,10 +1,18 @@
 module.exports = {
+  siteMetadata: {
+    title: `Thinking Digital`,
+    description: `For all your digial needs`,
+    author: `SG`
+  },
   plugins: [
     {
-      resolve: `gatsby-theme-codebushi`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        tailwindConfig: `tailwind.config.js`
+        name: `images`,
+        path: `${__dirname}/src/images`
       }
-    }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`
   ]
 };

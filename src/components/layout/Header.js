@@ -1,36 +1,55 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import styled from 'styled-components';
+
 import LogoIcon from '../../svg/LogoIcon';
-import Button from '../Button';
 
 const Header = () => (
-  <header className="sticky top-0 bg-white shadow">
-    <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
-      <div className="flex items-center text-2xl">
-        <div className="w-12 mr-3">
-          <LogoIcon />
-        </div>
-        Lander
+  <StyledHeader className="header">
+    <LogoDiv>
+      <div style={{ width: '50px' }}>
+        <LogoIcon />
       </div>
-      <div className="flex mt-4 sm:mt-0">
-        <AnchorLink className="px-4" href="#features">
-          Features
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#services">
-          Services
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#stats">
-          Stats
-        </AnchorLink>
-        <AnchorLink className="px-4" href="#testimonials">
-          Testimonials
-        </AnchorLink>
-      </div>
-      <div className="hidden md:block">
-        <Button className="text-sm">Start Free Trial</Button>
-      </div>
-    </div>
-  </header>
+      <span>Thinking Digital</span>
+    </LogoDiv>
+    <MenuNav>
+      <AnchorLink className="menu-link" href="#features">
+        Features
+      </AnchorLink>
+      <AnchorLink className="menu-link" href="#services">
+        Services
+      </AnchorLink>
+      <AnchorLink className="menu-link" href="#stats">
+        Stats
+      </AnchorLink>
+      <AnchorLink className="menu-link" href="#testimonials">
+        Testimonials
+      </AnchorLink>
+    </MenuNav>
+  </StyledHeader>
 );
+
+const StyledHeader = styled.header`
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightskyblue;
+  opacity: 0.95;
+  z-index: 5;
+`;
+
+const LogoDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const MenuNav = styled.nav`
+  position: relative;
+  left: 0;
+`;
 
 export default Header;

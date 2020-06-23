@@ -1,39 +1,64 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Footer = () => (
-  <footer className="container mx-auto py-16 px-3 mt-48 mb-8 text-gray-800">
-    <div className="flex -mx-3">
-      <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">About Us</h2>
-        <p className="mt-5">Ridiculus mus mauris vitae ultricies leo integer malesuada nunc.</p>
-      </div>
-      <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">Important Links</h2>
-        <ul className="mt-4 leading-loose">
-          <li>
-            <a href="https://codebushi.com">Terms &amp; Conditions</a>
-          </li>
-          <li>
-            <a href="https://codebushi.com">Privacy Policy</a>
-          </li>
-        </ul>
-      </div>
-      <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">Social Media</h2>
-        <ul className="mt-4 leading-loose">
-          <li>
-            <a href="https://dev.to/changoman">Dev.to</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/HuntaroSan">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/codebushi/gatsby-starter-lander">GitHub</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  <StyledFooter>
+    <Article>
+      <h2>About Us</h2>
+      <p>Ridiculus mus mauris vitae ultricies leo integer malesuada nunc.</p>
+    </Article>
+    <Article>
+      <h2>Important Links</h2>
+      <ul>
+        <li>
+          <a href="/">Terms &amp; Conditions</a>
+        </li>
+        <li>
+          <a href="/">Privacy Policy</a>
+        </li>
+      </ul>
+    </Article>
+    <Article>
+      <h2>Social Media</h2>
+      <ul>
+        <li>
+          <a href="https://dev.to/">Dev.to</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/">Twitter</a>
+        </li>
+        <li>
+          <a href="https://github.com/">GitHub</a>
+        </li>
+      </ul>
+    </Article>
+  </StyledFooter>
 );
+
+const StyledFooter = styled.footer`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #888;
+
+  @media screen and (min-width: 600px) {
+    flex-direction: row;
+  }
+`;
+
+const Article = styled.article`
+  height: 100%;
+  min-height: 150px;
+  min-width: 25%;
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+`;
 
 export default Footer;
