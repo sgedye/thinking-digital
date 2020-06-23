@@ -32,6 +32,7 @@ const Header = () => (
 const StyledHeader = styled.header`
   position: sticky;
   top: 0;
+  padding: 0 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

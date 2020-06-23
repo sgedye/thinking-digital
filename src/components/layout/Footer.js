@@ -22,10 +22,7 @@ const Footer = () => (
       <h2>Social Media</h2>
       <ul>
         <li>
-          <a href="https://dev.to/">Dev.to</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/">Twitter</a>
+          <a href="/">Twitter</a>
         </li>
         <li>
           <a href="https://github.com/">GitHub</a>
