@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const HeroOverlay = () => (
   <OverlayPanel id="overlayPanel">
-    <div className="overlay"></div>
+    <div className="overlay" />
   </OverlayPanel>
 );
 
