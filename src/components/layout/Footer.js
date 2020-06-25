@@ -39,6 +39,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   text-align: center;
   background: #888;
+  border-top: 1px solid #333;
 
   @media screen and (min-width: 600px) {
     flex-direction: row;

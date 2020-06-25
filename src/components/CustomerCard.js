@@ -1,8 +1,9 @@
 import React from 'react';
-import Card from './Card';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const CustomerCard = ({ customer }) => (
-  <Card className="mb-8">
+  <Card>
     <p className="text-xl font-semibold">{customer.title}</p>
     <p className="mt-6">{customer.content}</p>
     <div className="flex items-center mt-8">
@@ -18,5 +19,16 @@ const CustomerCard = ({ customer }) => (
     </div>
   </Card>
 );
+
+const Card = styled.article`
+  margin: 0 20px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #333;
+`;
+
+CustomerCard.propTypes = {
+  customer: PropTypes.node.isRequired
+};
 
 export default CustomerCard;

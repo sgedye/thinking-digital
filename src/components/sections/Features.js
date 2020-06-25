@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from '../../utils/Title';
+import SectionHeading from '../../utils/SectionHeading';
 
 const Features = () => (
   <Wrap>
-    <Title>Main Features</Title>
+    <SectionHeading>Main Features</SectionHeading>
     <FeaturesGroup>
       <Card>
         <h2>Service One</h2>

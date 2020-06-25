@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Title = ({ children }) => <StyledTitle>{children}</StyledTitle>;
+const SectionHeading = ({ children }) => <StyledTitle>{children}</StyledTitle>;
 
 const StyledTitle = styled.h1`
   mix-blend-mode: difference;
@@ -10,8 +10,8 @@ const StyledTitle = styled.h1`
   text-align: center;
 `;
 
-Title.propTypes = {
+SectionHeading.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-export default Title;
+export default SectionHeading;
