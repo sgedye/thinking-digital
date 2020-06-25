@@ -38,13 +38,17 @@ const FeaturesGroup = styled.div`
 `;
 
 const Card = styled.article`
-  margin: 0 20px;
+  margin: 10px 20px;
   padding: 10px;
-  width: 25%;
+  width: 80%;
   border-radius: 20px;
   box-shadow: 2px 2px 5px #333;
   h2 {
     font-weight: bold;
+  }
+  @media screen and (min-width: 600px) {
+    margin: 0 20px;
+    width: 25%;
   }
 `;
 
