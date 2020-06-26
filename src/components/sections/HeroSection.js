@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import StyledHero from '../../utils/StyledHero';
-import HeroImage from '../../svg/HeroImage';
+// import HeroImage from '../../svg/HeroImage';
 import Button from '../Button';
 
 const getBackground = graphql`

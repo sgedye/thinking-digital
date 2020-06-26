@@ -13,7 +13,7 @@ import gsap from 'gsap';
 import Layout from '../components/layout/Layout';
 import HeroOverlay from '../components/sections/HeroOverlay';
 import HeroSection from '../components/sections/HeroSection';
-import Features from '../components/sections/Features';
+// import Features from '../components/sections/Features';
 import DesignProcess from '../components/sections/DesignProcess';
 import Testamonials from '../components/sections/Testamonials';
 import CallToAction from '../components/sections/CallToAction';

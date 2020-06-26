@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <Header />
       <PageProgress />
       {/* Make the header transparent, then lightskyblue after 200px or something */}
-      <main>{children}</main>
+      <main id="main-body">{children}</main>
       <Footer />
     </>
   );

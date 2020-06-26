@@ -6,13 +6,13 @@ import LogoIcon from '../../svg/LogoIcon';
 import MobileNav from '../../utils/MobileNav';
 
 const Header = () => (
-  <StyledHeader className="header">
-    <LogoDiv>
-      <div style={{ width: '50px' }}>
-        <LogoIcon />
-      </div>
-      <h2>Thinking Digital</h2>
+  <StyledHeader>
+    <LogoDiv style={{ width: '48px', height: '48px' }}>
+      <LogoIcon />
     </LogoDiv>
+    <TitleDiv>
+      <h2>Thinking Digital</h2>
+    </TitleDiv>
     <MainNav>
       <MobileNav />
       {/* <DesktopNav /> */}
@@ -36,12 +36,14 @@ const Header = () => (
 
 const StyledHeader = styled.header`
   position: sticky;
-  top: 0;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: center;
   align-items: center;
+  top: 0;
+  height: 80px;
+  padding: 0;
   /* background-color: transparent; */
   background-color: rgba(205, 205, 255, 0.8);
   opacity: 0.95;
@@ -49,11 +51,14 @@ const StyledHeader = styled.header`
 `;
 
 const LogoDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin: 0 auto;
 `;
 
+const TitleDiv = styled.div`
+  h2 {
+    text-align: center;
+  }
+`;
 const MainNav = styled.nav`
   color: #000;
 `;

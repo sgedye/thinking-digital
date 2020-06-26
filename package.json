@@ -11,6 +11,7 @@
   "dependencies": {
     "gatsby": "^2.18.18",
     "gatsby-background-image": "^1.1.1",
+    "gatsby-link": "^2.4.8",
     "gatsby-plugin-sharp": "^2.6.13",
     "gatsby-source-filesystem": "^2.3.13",
     "gatsby-transformer-sharp": "^2.5.6",

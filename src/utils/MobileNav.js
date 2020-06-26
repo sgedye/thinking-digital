@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import Link from 'gatsby-link';
 import styled from 'styled-components';
 
 const MainNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <>
       <Hamburger isMenuOpen={isMenuOpen} onClick={() => setIsMenuOpen(prevState => !prevState)}>
@@ -15,10 +14,24 @@ const MainNav = () => {
       <MenuLinks isMenuOpen={isMenuOpen}>
         <ul>
           <li>
-            <AnchorLink to="/">Home</AnchorLink>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Home
+            </Link>
           </li>
           <li>
-            <AnchorLink to="/">Home2</AnchorLink>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Home2
+            </Link>
+          </li>
+          <li>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Home3
+            </Link>
+          </li>
+          <li>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Home4
+            </Link>
           </li>
         </ul>
       </MenuLinks>
@@ -27,16 +40,17 @@ const MainNav = () => {
 };
 
 const Hamburger = styled.div`
-  position: absolute;
-  display: block;
+  width: 30px;
+  margin: 0 auto;
   padding: 3px 6px;
-  cursor: pointer;
-  right: 20px;
-  top: 18px;
   z-index: 99;
+  cursor: pointer;
   transition: transform 800ms;
   transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(-90deg)' : 'rotate(0)')};
   transform-origin: center;
+  div {
+    box-shadow: ${({ isMenuOpen }) => (isMenuOpen ? '0px 0px 1px orange' : '0px 0px 1px green')};
+  }
   div:first-of-type {
     transform: ${({ isMenuOpen }) =>
       isMenuOpen ? 'rotate(-45deg) translate(-9px, 10px)' : 'rotate(0) translate(0)'};
@@ -52,9 +66,9 @@ const Hamburger = styled.div`
 `;
 
 const Line = styled.div`
-  width: ${({ isMenuOpen }) => (isMenuOpen ? '38px' : '30px')};
   height: 4px;
-  background: rgb(30, 190, 250);
+  width: 30px;
+  background-color: #1e3444;
   border-radius: 2px;
   margin: 5px 0;
   transition: all 800ms;
@@ -66,9 +80,26 @@ const MenuLinks = styled.div`
   top: 80px;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   height: ${({ isMenuOpen }) => (isMenuOpen ? 'calc(100vh - 80px)' : '0px')};
+  pointer-events: ${({ isMenuOpen }) => (isMenuOpen ? 'all' : 'none')};
   transition: height 800ms;
-  background: black;
+  text-shadow: 1px 1px 1px black;
+  background: rgba(88, 88, 88, 0.99);
+  ul {
+    height: 80%;
+    margin: 10% 0;
+    padding: 0;
+    display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')};
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    text-align: center;
+    font-size: 8vw;
+  }
 `;
 export default MainNav;
