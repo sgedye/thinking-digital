@@ -20,7 +20,8 @@ const Testamonials = () => (
 );
 
 const Wrap = styled.section`
-  width: 100%;
+  width: 80vw;
+  margin: 20px auto;
 `;
 
 const TestamonialDiv = styled.div`

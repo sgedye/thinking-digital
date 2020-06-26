@@ -12,7 +12,8 @@ const CallToAction = () => (
 );
 
 const Wrap = styled.section`
-  width: 100%;
+  width: 80vw;
+  margin: 20px auto;
 `;
 const Contents = styled.div`
   margin: 20px auto;

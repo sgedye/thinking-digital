@@ -39,7 +39,7 @@ export default () => {
     <Layout>
       <HeroOverlay />
       <HeroSection />
-      <Features />
+      {/* <Features /> */}
       <DesignProcess />
       <Testamonials />
       <CallToAction />

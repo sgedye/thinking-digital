@@ -8,7 +8,7 @@ import Button from '../Button';
 
 const getBackground = graphql`
   query {
-    BackgroundImage: file(relativePath: { eq: "rtgphoto-bg.jpg" }) {
+    BackgroundImage: file(relativePath: { eq: "galaxy-bg.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
@@ -38,9 +38,9 @@ const HeroSection = () => {
           </p>
           <p>Sed fermentum felis ut cursu</p>
         </TextBox>
-        <ImageBox>
+        {/* <ImageBox>
           <HeroImage />
-        </ImageBox>
+        </ImageBox> */}
       </Wrap>
     </StyledHero>
   );
@@ -51,8 +51,8 @@ const Wrap = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   @media screen and (min-width: 600px) {
     flex-direction: row;
@@ -62,21 +62,25 @@ const Wrap = styled.section`
 `;
 
 const TextBox = styled.div`
-  margin: 10px 20px;
+  margin: 0 auto;
   padding: 10px 20px;
+  width: 50%;
   min-height: 35%;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
   box-shadow: 2px 2px 5px #333;
+  h1 {
+    text-align: center;
+  }
 `;
 
-const ImageBox = styled.div`
-  margin: 10px 20px;
-  padding: 10px 20px;
-  width: 500px;
-  max-width: 90%;
-  min-height: 35%;
-  margin: 0 auto;
-`;
+// const ImageBox = styled.div`
+//   margin: 10px 20px;
+//   padding: 10px 20px;
+//   width: 500px;
+//   max-width: 90%;
+//   min-height: 35%;
+//   margin: 0 auto;
+// `;
 
 export default HeroSection;

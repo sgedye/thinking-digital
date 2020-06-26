@@ -23,7 +23,8 @@ const Features = () => (
 );
 
 const Wrap = styled.section`
-  width: 100%;
+  width: 80vw;
+  margin: 0 auto;
 `;
 
 const FeaturesGroup = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header';
+import PageProgress from './PageProgress';
 import Footer from './Footer';
 
 import './layout.css';
@@ -9,6 +10,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header />
+      <PageProgress />
+      {/* Make the header transparent, then lightskyblue after 200px or something */}
       <main>{children}</main>
       <Footer />
     </>
