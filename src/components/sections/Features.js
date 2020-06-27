@@ -4,7 +4,7 @@ import SectionHeading from '../../utils/SectionHeading';
 
 const Features = () => (
   <Wrap>
-    <SectionHeading>Main Features</SectionHeading>
+    <SectionHeading title="Main Features" />
     <FeaturesGroup>
       <Card>
         <h2>Service One</h2>

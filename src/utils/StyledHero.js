@@ -12,7 +12,8 @@ const StyledHero = ({ fluid, className, children }) => {
 };
 
 StyledHero.propTypes = {
-  fluid: PropTypes.node.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  fluid: PropTypes.object.isRequired,
   className: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired
 };

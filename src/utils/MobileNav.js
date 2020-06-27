@@ -49,7 +49,7 @@ const Hamburger = styled.div`
   transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(-90deg)' : 'rotate(0)')};
   transform-origin: center;
   div {
-    box-shadow: ${({ isMenuOpen }) => (isMenuOpen ? '0px 0px 1px orange' : '0px 0px 1px green')};
+    box-shadow: ${({ isMenuOpen }) => (isMenuOpen ? '0px 0px 1px orange' : '0px 0px 1px black')};
   }
   div:first-of-type {
     transform: ${({ isMenuOpen }) =>
@@ -85,7 +85,7 @@ const MenuLinks = styled.div`
   pointer-events: ${({ isMenuOpen }) => (isMenuOpen ? 'all' : 'none')};
   transition: height 800ms;
   text-shadow: 1px 1px 1px black;
-  background: rgba(88, 88, 88, 0.99);
+  background: rgba(33, 33, 33, 0.99);
   ul {
     height: 80%;
     margin: 10% 0;

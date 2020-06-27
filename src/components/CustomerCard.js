@@ -24,7 +24,8 @@ const Card = styled.article`
 `;
 
 CustomerCard.propTypes = {
-  customer: PropTypes.node.isRequired
+  // eslint-disable-next-line react/forbid-prop-types
+  customer: PropTypes.object.isRequired
 };
 
 export default CustomerCard;

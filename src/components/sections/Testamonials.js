@@ -7,7 +7,7 @@ import SectionHeading from '../../utils/SectionHeading';
 
 const Testamonials = () => (
   <Wrap>
-    <SectionHeading>What customers are saying</SectionHeading>
+    <SectionHeading title="What customers are saying" />
     <p>Make this a 100% width card... only show one at a time... transition/slideshow</p>
     <TestamonialDiv>
       {customerData.map(customer => (

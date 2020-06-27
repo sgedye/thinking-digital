@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const SectionHeading = ({ children }) => <StyledTitle>{children}</StyledTitle>;
+const SectionHeading = ({ title }) => <StyledTitle>{title}</StyledTitle>;
 
 const StyledTitle = styled.h1`
   mix-blend-mode: difference;
@@ -11,7 +11,7 @@ const StyledTitle = styled.h1`
 `;
 
 SectionHeading.propTypes = {
-  children: PropTypes.node.isRequired
+  title: PropTypes.node.isRequired
 };
 
 export default SectionHeading;

@@ -39,7 +39,8 @@ const StyledDesignStep = styled.div`
 `;
 
 DesignStep.propTypes = {
-  step: PropTypes.node.isRequired
+  // eslint-disable-next-line react/forbid-prop-types
+  step: PropTypes.object.isRequired
 };
 
 export default DesignStep;

@@ -1,38 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
 
 import LogoIcon from '../../svg/LogoIcon';
 import MobileNav from '../../utils/MobileNav';
 
-const Header = () => (
-  <StyledHeader>
-    <LogoDiv style={{ width: '48px', height: '48px' }}>
-      <LogoIcon />
-    </LogoDiv>
-    <TitleDiv>
-      <h2>Thinking Digital</h2>
-    </TitleDiv>
-    <MainNav>
-      <MobileNav />
-      {/* <DesktopNav /> */}
-    </MainNav>
-    {/* <MenuNav>
-      <AnchorLink className="menu-link" href="#features">
-        Features
-      </AnchorLink>
-      <AnchorLink className="menu-link" href="#services">
-        Services
-      </AnchorLink>
-      <AnchorLink className="menu-link" href="#stats">
-        Stats
-      </AnchorLink>
-      <AnchorLink className="menu-link" href="#testimonials">
-        Testimonials
-      </AnchorLink>
-    </MenuNav> */}
-  </StyledHeader>
-);
+const Header = () => {
+  // const [isScrolled, setIsScrolled] = useState(false);
+
+  // const watchScrolling = () => {
+  //   console.log(document.documentElement)
+  //   const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
+  //   const winScroll = document.body.scrollTop || scrollTop;
+  //   const winHeight = scrollHeight - clientHeight;
+  //   const scrolled = `${(winScroll / winHeight) * 100}%`;
+  //   return winHeight > 0 ? setWidth(scrolled) : setWidth(0);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', watchScrolling);
+  //   return () => window.removeEventListener('scroll', watchScrolling);
+  // });
+
+  return (
+    <StyledHeader>
+      <LogoDiv style={{ width: '48px', height: '48px' }}>
+        <LogoIcon />
+      </LogoDiv>
+      <TitleDiv>
+        <h2>Thinking Digital</h2>
+      </TitleDiv>
+      <MainNav>
+        <MobileNav />
+        {/* <DesktopNav /> */}
+      </MainNav>
+      {/* <MenuNav>
+        <AnchorLink className="menu-link" href="#features">
+          Features
+        </AnchorLink>
+        <AnchorLink className="menu-link" href="#services">
+          Services
+        </AnchorLink>
+        <AnchorLink className="menu-link" href="#stats">
+          Stats
+        </AnchorLink>
+        <AnchorLink className="menu-link" href="#testimonials">
+          Testimonials
+        </AnchorLink>
+      </MenuNav> */}
+    </StyledHeader>
+  );
+};
 
 const StyledHeader = styled.header`
   position: sticky;

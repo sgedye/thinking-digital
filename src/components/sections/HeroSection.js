@@ -28,7 +28,7 @@ const HeroSection = () => {
     >
       <Wrap>
         <TextBox>
-          <h1>Main title of your landing page</h1>
+          <h1>Web Solutions</h1>
           <p>
             Free landing page template to promote your business startup and generate leads for the
             offered services
@@ -69,6 +69,7 @@ const TextBox = styled.div`
   background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
   box-shadow: 2px 2px 5px #333;
+  text-shadow: 1px 1px 5px white;
   h1 {
     text-align: center;
   }

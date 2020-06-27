@@ -3,10 +3,12 @@ import styled from 'styled-components';
 
 import processData from '../../data/process-data';
 import DesignStep from '../DesignStep';
+import SectionHeading from '../../utils/SectionHeading';
 
 const DesignProcess = () => {
   return (
     <Wrap id="design-process">
+      <SectionHeading title="Main Features" />
       {processData.map(step => (
         <div key={step.title}>
           <DesignStep step={step} />
