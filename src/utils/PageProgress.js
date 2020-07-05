@@ -1,4 +1,4 @@
-// This component was written by Noman Gul
+// This component was written by Noman Gul, edited by Shaun Gedye
 import React, { useState, useEffect } from 'react';
 
 const PageProgress = () => {

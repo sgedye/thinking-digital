@@ -6,24 +6,37 @@ import LogoIcon from '../../svg/LogoIcon';
 import MobileNav from '../../utils/MobileNav';
 
 const Header = () => {
-  // const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(0);
+  const [headerStyle, setHeaderStyle] = useState(null);
 
-  // const watchScrolling = () => {
-  //   console.log(document.documentElement)
-  //   const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
-  //   const winScroll = document.body.scrollTop || scrollTop;
-  //   const winHeight = scrollHeight - clientHeight;
-  //   const scrolled = `${(winScroll / winHeight) * 100}%`;
-  //   return winHeight > 0 ? setWidth(scrolled) : setWidth(0);
-  // };
+  const watchScrolling = () => {
+    const { scrollTop } = document.documentElement;
+    const winScroll = document.body.scrollTop || scrollTop;
+    setScrolled(winScroll);
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', watchScrolling);
-  //   return () => window.removeEventListener('scroll', watchScrolling);
-  // });
+  useEffect(() => {
+    window.addEventListener('scroll', watchScrolling);
+    return () => window.removeEventListener('scroll', watchScrolling);
+  });
+
+  useEffect(() => {
+    if (scrolled > 20) {
+      setHeaderStyle({
+        height: 80,
+        backgroundColor: 'rgba(205, 205, 255, 0.95)'
+      });
+    } else {
+      setHeaderStyle({
+        height: 100,
+        backgroundColor: 'rgba(205, 205, 255, 0.1)',
+        borderBottom: '1px solid darkblue'
+      });
+    }
+  }, [scrolled]);
 
   return (
-    <StyledHeader>
+    <StyledHeader style={headerStyle}>
       <LogoDiv style={{ width: '48px', height: '48px' }}>
         <LogoIcon />
       </LogoDiv>
@@ -34,6 +47,7 @@ const Header = () => {
         <MobileNav />
         {/* <DesktopNav /> */}
       </MainNav>
+
       {/* <MenuNav>
         <AnchorLink className="menu-link" href="#features">
           Features
@@ -60,12 +74,13 @@ const StyledHeader = styled.header`
   justify-content: center;
   align-items: center;
   top: 0;
-  height: 80px;
+  /* height: 80px; */
   padding: 0;
   /* background-color: transparent; */
-  background-color: rgba(205, 205, 255, 0.8);
-  opacity: 0.95;
+  /* background-color: rgba(205, 205, 255, 0.8); */
+  opacity: 0.995;
   z-index: 5;
+  transition: all 50ms ease-in-out;
 `;
 
 const LogoDiv = styled.div`
@@ -74,6 +89,7 @@ const LogoDiv = styled.div`
 
 const TitleDiv = styled.div`
   h2 {
+    margin: 0 auto;
     text-align: center;
   }
 `;

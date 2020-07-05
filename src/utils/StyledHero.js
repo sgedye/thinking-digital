@@ -19,7 +19,7 @@ StyledHero.propTypes = {
 };
 
 export default styled(StyledHero)`
-  margin-top: -80px;
+  margin-top: -100px;
   height: 100vh;
   background-position: center;
   background-size: cover;
