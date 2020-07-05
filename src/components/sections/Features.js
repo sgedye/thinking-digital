@@ -3,8 +3,11 @@ import styled from 'styled-components';
 import SectionHeading from '../../utils/SectionHeading';
 
 const Features = () => (
-  <Wrap>
+  <Wrap id="features">
     <SectionHeading title="Main Features" />
+
+    {/* Look at Eduka's website */}
+
     <FeaturesGroup>
       <Card>
         <h2>Service One</h2>

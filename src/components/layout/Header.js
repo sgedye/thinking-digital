@@ -21,7 +21,7 @@ const Header = () => {
   });
 
   useEffect(() => {
-    if (scrolled > 20) {
+    if (scrolled > 2) {
       setHeaderStyle({
         height: 80,
         backgroundColor: 'rgba(205, 205, 255, 0.95)'
@@ -45,7 +45,7 @@ const Header = () => {
       </TitleDiv>
       <MainNav>
         <MobileNav />
-        {/* <DesktopNav /> */}
+        {/* {window.outerWidth > 600 ? <MobileNav /> : <DesktopNav />} */}
       </MainNav>
 
       {/* <MenuNav>
@@ -74,13 +74,9 @@ const StyledHeader = styled.header`
   justify-content: center;
   align-items: center;
   top: 0;
-  /* height: 80px; */
   padding: 0;
-  /* background-color: transparent; */
-  /* background-color: rgba(205, 205, 255, 0.8); */
-  opacity: 0.995;
   z-index: 5;
-  transition: all 50ms ease-in-out;
+  transition: all 200ms ease-out;
 `;
 
 const LogoDiv = styled.div`

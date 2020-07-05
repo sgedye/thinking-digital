@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
-import Link from 'gatsby-link';
+import React, { useState, useEffect } from 'react';
+// import Link from 'gatsby-link';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 
-const MainNav = () => {
+const MobileNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.style.overflow = isMenuOpen ? 'hidden' : 'auto';
+  }, [isMenuOpen]);
   return (
     <>
       <Hamburger isMenuOpen={isMenuOpen} onClick={() => setIsMenuOpen(prevState => !prevState)}>
@@ -14,24 +20,24 @@ const MainNav = () => {
       <MenuLinks isMenuOpen={isMenuOpen}>
         <ul>
           <li>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+            <AnchorLink to="/" onClick={() => setIsMenuOpen(false)}>
               Home
-            </Link>
+            </AnchorLink>
           </li>
           <li>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
-              Home2
-            </Link>
+            <a href="#features" onClick={() => setIsMenuOpen(false)}>
+              About Us | Features
+            </a>
           </li>
           <li>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
-              Home3
-            </Link>
+            <AnchorLink to="/features" onClick={() => setIsMenuOpen(false)}>
+              Services
+            </AnchorLink>
           </li>
           <li>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
-              Home4
-            </Link>
+            <AnchorLink to="/" onClick={() => setIsMenuOpen(false)}>
+              Contact Us
+            </AnchorLink>
           </li>
         </ul>
       </MenuLinks>
@@ -68,7 +74,7 @@ const Hamburger = styled.div`
 const Line = styled.div`
   height: 4px;
   width: 30px;
-  background-color: #1e3444;
+  background-color: #111;
   border-radius: 2px;
   margin: 5px 0;
   transition: all 800ms;
@@ -86,6 +92,7 @@ const MenuLinks = styled.div`
   transition: height 800ms;
   text-shadow: 1px 1px 1px black;
   background: rgba(33, 33, 33, 0.99);
+  z-index: 5;
   ul {
     height: 80%;
     margin: 10% 0;
@@ -102,4 +109,4 @@ const MenuLinks = styled.div`
     font-size: 8vw;
   }
 `;
-export default MainNav;
+export default MobileNav;

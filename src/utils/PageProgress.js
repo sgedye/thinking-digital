@@ -28,7 +28,7 @@ const PageProgress = () => {
       height: 5,
       width,
       top: 0,
-      zIndex: 99,
+      zIndex: 3,
       transition: 'width 200ms ease-out'
     }
   };
