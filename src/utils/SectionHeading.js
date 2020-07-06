@@ -6,8 +6,11 @@ const SectionHeading = ({ title }) => <StyledTitle>{title}</StyledTitle>;
 
 const StyledTitle = styled.h1`
   mix-blend-mode: difference;
-  font-size: 5vw;
+  font-size: 24px;
   text-align: center;
+  @media screen and (min-width: 768px) {
+    font-size: 5vw;
+  }
 `;
 
 SectionHeading.propTypes = {

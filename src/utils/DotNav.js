@@ -18,7 +18,7 @@ const DotRow = styled.div`
   margin: 0 auto;
   width: 50%;
   div {
-    background-color: green;
+    background-color: darkblue;
   }
   div:hover {
     background-color: purple;

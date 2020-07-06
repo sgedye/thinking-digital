@@ -22,6 +22,7 @@ const HeroSection = () => {
   const data = useStaticQuery(getBackground);
   return (
     <StyledHero
+      id="home"
       className="styledHero"
       fluid={data.BackgroundImage.childImageSharp.fluid}
       alt="Hero Background"

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import Link from 'gatsby-link';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+// import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 
 const MobileNav = () => {
@@ -20,24 +20,34 @@ const MobileNav = () => {
       <MenuLinks isMenuOpen={isMenuOpen}>
         <ul>
           <li>
-            <AnchorLink to="/" onClick={() => setIsMenuOpen(false)}>
+            <a href="#home" onClick={() => setIsMenuOpen(false)}>
               Home
-            </AnchorLink>
+            </a>
           </li>
           <li>
             <a href="#features" onClick={() => setIsMenuOpen(false)}>
               About Us | Features
             </a>
           </li>
-          <li>
+          {/* <li>
             <AnchorLink to="/features" onClick={() => setIsMenuOpen(false)}>
               Services
             </AnchorLink>
+          </li> */}
+          <li>
+            <a href="#testamonials" onClick={() => setIsMenuOpen(false)}>
+              Testamonials
+            </a>
           </li>
           <li>
-            <AnchorLink to="/" onClick={() => setIsMenuOpen(false)}>
+            <a href="#call-to-action" onClick={() => setIsMenuOpen(false)}>
+              Call To Action
+            </a>
+          </li>
+          <li>
+            <a href="#contact-us" onClick={() => setIsMenuOpen(false)}>
               Contact Us
-            </AnchorLink>
+            </a>
           </li>
         </ul>
       </MenuLinks>

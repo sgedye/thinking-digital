@@ -16,13 +16,12 @@ export default [
     customerTitle: 'Owner and Photographer',
     customerCompany: 'RTG Photography',
     customerLogo: 'https://rtgphotography.com.au/img/logo-snow-500.png'
-  },
-  {
-    id: 'testamonial-3',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
-    content: 'Sit amet consectetur adipiscing elit duis.',
-    customerName: 'Jane Smith',
-    customerTitle: 'Director of Research and Data',
-    customerImage: 'https://placeimg.com/150/150/people'
   }
+  // {
+  //   title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+  //   content: 'Sit amet consectetur adipiscing elit duis.',
+  //   customerName: 'Jane Smith',
+  //   customerTitle: 'Director of Research and Data',
+  //   customerImage: 'https://placeimg.com/150/150/people'
+  // }
 ];

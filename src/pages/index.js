@@ -11,8 +11,9 @@ import gsap from 'gsap';
 // import SvgCharts from '../svg/SvgCharts';
 
 import Layout from '../components/layout/Layout';
-import HeroOverlay from '../components/sections/HeroOverlay';
+// import HeroOverlay from '../components/sections/HeroOverlay';
 import HeroSection from '../components/sections/HeroSection';
+import AboutUs from '../components/sections/AboutUs';
 // import Features from '../components/sections/Features';
 import DesignProcess from '../components/sections/DesignProcess';
 import Testamonials from '../components/sections/Testamonials';
@@ -37,12 +38,13 @@ export default () => {
 
   return (
     <Layout>
-      <HeroOverlay />
+      {/* <HeroOverlay /> */}
       <HeroSection />
+      <AboutUs />
       {/* <Features /> */}
       <DesignProcess />
       <Testamonials />
-      <CallToAction />
+      <CallToAction id="call-to-action" />
       {/* 
       <section id="stats" className="py-20 lg:pt-32">
         <div className="container mx-auto text-center">

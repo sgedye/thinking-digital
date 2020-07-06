@@ -11,7 +11,7 @@ const Testamonials = () => {
   const randomCustomer = Math.floor(Math.random() * customerData.length);
 
   return (
-    <Wrap>
+    <Wrap id="testamonials">
       <SectionHeading title="What customers are saying" />
       <TestamonialDiv>
         <TestamonialCard customer={customerData[randomCustomer]} />

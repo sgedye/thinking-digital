@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Thinking Digital`,
-    description: `For all your digial needs`,
-    author: `SG`
+    author: `Shaun Gedye`,
+    description: `For all your digial needs`
   },
   plugins: [
     {
