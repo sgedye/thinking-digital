@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import customerData from '../../data/customer-data';
 // import CustomerCard from '../CustomerCard';
 import SectionHeading from '../../utils/SectionHeading';
-import TestamonialCard from '../TestamonialCard';
+import TestimonialCard from '../TestimonialCard';
 import DotNav from '../../utils/DotNav';
+// import TestimonialSvg from '../../svg/TestimonialSvg';
 
 const Testamonials = () => {
   const randomCustomer = Math.floor(Math.random() * customerData.length);
@@ -13,21 +14,14 @@ const Testamonials = () => {
   return (
     <Wrap id="testamonials">
       <SectionHeading title="What customers are saying" />
-      <TestamonialDiv>
-        <TestamonialCard customer={customerData[randomCustomer]} />
+      <TestimonialDiv>
+        <TestimonialCard customer={customerData[randomCustomer]} />
         <p style={{ color: 'blue', textAlign: 'center' }}>
           Dots here to switch between different testamonials
         </p>
         <DotNav numDots={customerData} />
-      </TestamonialDiv>
-
-      {/* <TestamonialDiv>
-        {customerData.map(customer => (
-          <div key={customer.customerName}>
-            <CustomerCard customer={customer} />
-          </div>
-        ))}
-      </TestamonialDiv> */}
+      </TestimonialDiv>
+      {/* <TestimonialSvg /> */}
     </Wrap>
   );
 };
@@ -37,15 +31,12 @@ const Wrap = styled.section`
   margin: 20px auto;
   padding: 25px;
   background-color: #557;
-  h1 {
-    mix-blend-mode: normal;
-  }
   @media screen and (min-width: 768px) {
     /* width: 80vw; */
   }
 `;
 
-const TestamonialDiv = styled.div`
+const TestimonialDiv = styled.div`
   /* margin: 0 20px;
   padding: 10px;
   border-radius: 20px;
@@ -53,7 +44,7 @@ const TestamonialDiv = styled.div`
   text-align: center;
 `;
 
-// const TestamonialDiv = styled.div`
+// const TestimonialDiv = styled.div`
 //   display: flex;
 //   flex-direction: column;
 //   justify-content: center;

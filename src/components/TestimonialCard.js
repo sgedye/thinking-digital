@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const TestamonialCard = ({ customer }) => (
+const TestimonialCard = ({ customer }) => (
   <Card>
     <Content>
       <p>&quot;{customer.content}&quot;</p>
@@ -74,9 +74,9 @@ const CustomerDetails = styled.article`
   }
 `;
 
-TestamonialCard.propTypes = {
+TestimonialCard.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   customer: PropTypes.object.isRequired
 };
 
-export default TestamonialCard;
+export default TestimonialCard;
