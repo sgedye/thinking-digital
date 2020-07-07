@@ -8,7 +8,7 @@ import Button from '../Button';
 
 const getBackground = graphql`
   query {
-    BackgroundImage: file(relativePath: { eq: "road-bg.jpg" }) {
+    BackgroundImage: file(relativePath: { eq: "images/road-bg.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
