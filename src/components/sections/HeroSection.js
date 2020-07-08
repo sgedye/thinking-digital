@@ -30,18 +30,12 @@ const HeroSection = () => {
       <Wrap>
         <TextBox>
           <h1>Web Solutions</h1>
+          <p>We create bespoke websites and web applications to solve to solve your needs.</p>
           <p>
-            Free landing page template to promote your business startup and generate leads for the
-            offered services
-          </p>
-          <p>
-            <Button>Get Started</Button>
+            <Button styles={{fontSize: '23px', backgroundColor: 'red'}}>Learn More -- smooth scroll to about us.</Button>
           </p>
           <p>Sed fermentum felis ut cursu</p>
         </TextBox>
-        {/* <ImageBox>
-          <HeroImage />
-        </ImageBox> */}
       </Wrap>
     </StyledHero>
   );
@@ -75,14 +69,5 @@ const TextBox = styled.div`
     text-align: center;
   }
 `;
-
-// const ImageBox = styled.div`
-//   margin: 10px 20px;
-//   padding: 10px 20px;
-//   width: 500px;
-//   max-width: 90%;
-//   min-height: 35%;
-//   margin: 0 auto;
-// `;
 
 export default HeroSection;

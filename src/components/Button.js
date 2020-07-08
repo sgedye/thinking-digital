@@ -1,23 +1,27 @@
 import React from 'react';
 
-const sizes = {
-  default: `py-3 px-8`,
-  lg: `py-4 px-12`,
-  xl: `py-5 px-16 text-lg`
-};
-
-const Button = ({ children, className = '', size }) => {
+const Button = ({ children, className = '', styles = {} }) => {
+  console.log(className, styles);
+  const defaultStyles = {
+    color: 'blue'
+  };
+  // We need to merge the two styles, so that the new styles are added to the
+  // existing [default] styles (overwriting them if they exist). Remember these
+  // are objects (and not strings, so can't be done like the classes below)
   return (
     <button
       type="button"
       className={`
-        ${sizes[size] || sizes.default}
         ${className}
         bg-primary
         hover:bg-primary-darker
         rounded
         text-white
-    `}
+      `}
+      style={styles}
+      // style={{
+      //   backgroundColor: 'green'
+      // }}
     >
       {children}
     </button>

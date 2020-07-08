@@ -28,7 +28,7 @@ const Testamonials = () => {
 
 const Wrap = styled.section`
   /* width: 90vw; */
-  margin: 20px auto;
+  /* margin: 20px auto; */
   padding: 25px;
   background-color: #557;
   @media screen and (min-width: 768px) {
