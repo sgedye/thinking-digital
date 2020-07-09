@@ -1,31 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Button = ({ children, className = '', styles = {} }) => {
-  console.log(className, styles);
+const Button = ({ children, additionalStyles = {} }) => {
   const defaultStyles = {
-    color: 'blue'
+    fontSize: '23px',
+    color: 'blue',
+    backgroundColor: 'green'
   };
-  // We need to merge the two styles, so that the new styles are added to the
-  // existing [default] styles (overwriting them if they exist). Remember these
-  // are objects (and not strings, so can't be done like the classes below)
+  const mergedStyles = { ...defaultStyles, ...additionalStyles };
+
   return (
-    <button
-      type="button"
-      className={`
-        ${className}
-        bg-primary
-        hover:bg-primary-darker
-        rounded
-        text-white
-      `}
-      style={styles}
-      // style={{
-      //   backgroundColor: 'green'
-      // }}
-    >
+    <button type="button" style={mergedStyles}>
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  children: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  additionalStyles: PropTypes.object.isRequired
 };
 
 export default Button;

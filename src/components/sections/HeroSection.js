@@ -32,7 +32,9 @@ const HeroSection = () => {
           <h1>Web Solutions</h1>
           <p>We create bespoke websites and web applications to solve to solve your needs.</p>
           <p>
-            <Button styles={{fontSize: '23px', backgroundColor: 'red'}}>Learn More -- smooth scroll to about us.</Button>
+            <Button additionalStyles={{ backgroundColor: 'red', borderRadius: '25px' }}>
+              Learn More -- smooth scroll to about us.
+            </Button>
           </p>
           <p>Sed fermentum felis ut cursu</p>
         </TextBox>
@@ -61,6 +63,7 @@ const TextBox = styled.div`
   padding: 10px 20px;
   width: 50%;
   min-height: 35%;
+  text-align: center;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
   box-shadow: 2px 2px 5px #333;
