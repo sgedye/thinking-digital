@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({ children, additionalStyles = {} }) => {
-  const defaultStyles = {
+  const styles = {
     fontSize: '23px',
     color: 'blue',
-    backgroundColor: 'green'
+    backgroundColor: 'green',
+    ...additionalStyles
   };
-  const mergedStyles = { ...defaultStyles, ...additionalStyles };
 
   return (
-    <button type="button" style={mergedStyles}>
+    <button type="button" style={styles}>
       {children}
     </button>
   );

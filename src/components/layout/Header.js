@@ -3,6 +3,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
 
 import LogoIcon from '../../svg/LogoIcon';
+import DesktopNav from '../../utils/DesktopNav';
 import MobileNav from '../../utils/MobileNav';
 
 const Header = () => {
@@ -44,8 +45,8 @@ const Header = () => {
         <h2>Thinking Digital</h2>
       </TitleDiv>
       <MainNav>
-        <MobileNav />
-        {/* {window.outerWidth > 600 ? <MobileNav /> : <DesktopNav />} */}
+        {/* <MobileNav /> */}
+        {window.outerWidth > 600 ? <DesktopNav /> : <MobileNav />}
       </MainNav>
 
       {/* <MenuNav>
@@ -77,6 +78,10 @@ const StyledHeader = styled.header`
   padding: 0;
   z-index: 5;
   transition: all 200ms ease-out;
+  @media screen and (min-width: 600px) {
+    grid-template-columns: 1fr 1fr 4fr;
+    color: white;
+  }
 `;
 
 const LogoDiv = styled.div`

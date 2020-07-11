@@ -2,13 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SectionHeading from '../../utils/SectionHeading';
-import AboutValue from '../AboutValue';
 import aboutData from '../../data/about-data';
 
 const AboutUs = () => (
-  <Wrap id="features">
-    <SectionHeading title="About Us" />
-    <h2>Our Values:</h2>
+  <Wrap id="about-us">
+    <SectionHeading title="Our Values | About Us" />
     <ul>
       <li>Listening:</li>
       <li>Responsive:</li>
@@ -16,13 +14,14 @@ const AboutUs = () => (
       <li>Agile:</li>
       <li>Inclusive:</li>
     </ul>
-    <Values>
+    <ValuesGroup>
       {aboutData.map(step => (
-        <div key={step.title}>
-          <AboutValue step={step} />
-        </div>
+        <Card key={step.title}>
+          <h2>{step.title}</h2>
+          <p>{step.content}</p>
+        </Card>
       ))}
-    </Values>
+    </ValuesGroup>
   </Wrap>
 );
 
@@ -31,18 +30,30 @@ const Wrap = styled.section`
   margin: 0 auto;
 `;
 
-const Values = styled.div`
+const ValuesGroup = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: center;
   justify-content: center;
-  div {
-    margin: 5px;
-  }
+  align-items: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     flex-direction: row;
+  }
+`;
+
+const Card = styled.article`
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #333;
+  h2 {
+    margin: 5px auto;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  @media screen and (min-width: 600px) {
+    margin: 0 20px;
+    width: 25%;
   }
 `;
 

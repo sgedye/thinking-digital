@@ -2,17 +2,17 @@ import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
 
-const MainNav = () => (
-  <nav>
+const DesktopNav = () => (
+  <NavLinks>
     <ul id="nav-links" className="navbar-nav mx-auto text-capitalize">
       <li className="nav-item link">
         <AnchorLink className="nav-link" to="/">
-          Links...
+          Home
         </AnchorLink>
       </li>
       <li className="nav-item link">
-        <AnchorLink className="nav-link" to="/">
-          Links...
+        <AnchorLink className="nav-link" to="/about-us">
+          About Us | Features
         </AnchorLink>
       </li>
       <li className="nav-item link">
@@ -31,12 +31,16 @@ const MainNav = () => (
         </AnchorLink>
       </li>
     </ul>
-    <div id="hamburger">
-      <div id="hb-top" className="line" />
-      <div id="hb-middle" className="line" />
-      <div id="hb-bottom" className="line" />
-    </div>
-  </nav>
+  </NavLinks>
 );
 
-export default MainNav;
+const NavLinks = styled.nav`
+  color: red;
+  font-weight: bold;
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+`;
+export default DesktopNav;

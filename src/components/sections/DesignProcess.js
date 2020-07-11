@@ -7,6 +7,8 @@ import SectionHeading from '../../utils/SectionHeading';
 
 const DesignProcess = () => {
   return (
+    // Look at Eduka's website
+
     <Wrap id="design-process">
       <SectionHeading title="Main Features" />
       {processData.map(step => (
