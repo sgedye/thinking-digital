@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-// import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 
-import LogoIcon from '../svg/LogoIcon';
+import LogoIcon from '../assets/svg/LogoIcon';
 import DesktopNav from '../utils/DesktopNav';
 import MobileNav from '../utils/MobileNav';
 
@@ -29,7 +29,8 @@ const Header = () => {
       });
     } else {
       setHeaderStyle({
-        height: 100,
+        // height: 100,
+        height: 80,
         backgroundColor: 'rgba(205, 205, 255, 0.1)',
         borderBottom: '1px solid darkblue'
       });
@@ -46,23 +47,22 @@ const Header = () => {
       </TitleDiv>
       <MainNav>
         {/* <MobileNav /> */}
-        {window.outerWidth > 600 ? <DesktopNav /> : <MobileNav />}
-      </MainNav>
+        {/* {window.outerWidth > 600 ? <DesktopNav /> : <MobileNav />} */}
+        {/* </MainNav> */}
 
-      {/* <MenuNav>
-        <AnchorLink className="menu-link" href="#features">
-          Features
+        <AnchorLink className="menu-link" to="/#about-us">
+          About Us
         </AnchorLink>
-        <AnchorLink className="menu-link" href="#services">
+        <AnchorLink className="menu-link" to="/#features">
+          features
+        </AnchorLink>
+        <AnchorLink className="menu-link" to="/#services">
           Services
         </AnchorLink>
-        <AnchorLink className="menu-link" href="#stats">
-          Stats
-        </AnchorLink>
-        <AnchorLink className="menu-link" href="#testimonials">
+        <AnchorLink className="menu-link" to="/#testimonials">
           Testimonials
         </AnchorLink>
-      </MenuNav> */}
+      </MainNav>
     </StyledHeader>
   );
 };

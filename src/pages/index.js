@@ -7,10 +7,10 @@ import Layout from '../layout/Layout';
 import HeroSection from '../sections/HeroSection';
 import AboutUs from '../sections/AboutUs';
 import DesignProcess from '../sections/DesignProcess';
-import Testamonials from '../sections/Testamonials';
+import Testimonials from '../sections/Testimonials';
 // import CallToAction from '../sections/CallToAction';
 
-export default () => {
+const index = () => {
   // useEffect(() => {
   //   const tl = gsap.timeline();
   //   tl.to('.overlay', 1.4, {
@@ -33,8 +33,10 @@ export default () => {
       <HeroSection />
       <AboutUs />
       <DesignProcess />
-      <Testamonials />
+      <Testimonials />
       {/* <CallToAction id="call-to-action" /> */}
     </Layout>
   );
 };
+
+export default index;

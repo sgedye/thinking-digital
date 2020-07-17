@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import customerData from '../data/customer-data';
-// import CustomerCard from '../CustomerCard';
+import customerData from '../assets/data/customer-data';
+// import CustomerCard from '../components/CustomerCard';
 import SectionHeading from '../utils/SectionHeading';
 import TestimonialCard from '../components/TestimonialCard';
 import DotNav from '../utils/DotNav';
-// import TestimonialSvg from '../svg/TestimonialSvg';
+// import TestimonialSvg from '../assets/svg/TestimonialSvg';
 
-const Testamonials = () => {
+const Testimonials = () => {
   const randomCustomer = Math.floor(Math.random() * customerData.length);
 
   return (
-    <Wrap id="testamonials">
+    <Wrap id="testimonials">
       <SectionHeading title="What customers are saying" />
       <TestimonialDiv>
         <TestimonialCard customer={customerData[randomCustomer]} />
         <p style={{ color: 'blue', textAlign: 'center' }}>
-          Dots here to switch between different testamonials
+          Dots here to switch between different testimonials
         </p>
         <DotNav numDots={customerData} />
       </TestimonialDiv>
@@ -55,4 +55,4 @@ const TestimonialDiv = styled.div`
 //   }
 // `;
 
-export default Testamonials;
+export default Testimonials;

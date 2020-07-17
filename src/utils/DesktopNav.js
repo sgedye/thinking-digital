@@ -1,5 +1,5 @@
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import styled from 'styled-components';
 
 const DesktopNav = () => (

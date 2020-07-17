@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header';
-import PageProgress from '../utils/PageProgress';
+// import PageProgress from '../utils/PageProgress';
 import Footer from './Footer';
-
-import './layout.css';
+import '../assets/scss/base.scss';
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <PageProgress />
+      {/* <PageProgress /> */}
       {/* Make the header transparent, then lightskyblue after 200px or something */}
       <main id="main-body">{children}</main>
       <Footer />

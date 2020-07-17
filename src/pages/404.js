@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import SectionHeading from '../utils/SectionHeading';
 // import Layout from '../layout/Layout';
-import TestimonialSvg from '../svg/TestimonialSvg';
+import TestimonialSvg from '../assets/svg/TestimonialSvg';
 
 const NotFound = () => (
   <Wrap>

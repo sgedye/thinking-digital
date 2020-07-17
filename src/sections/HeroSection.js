@@ -1,14 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import styled from 'styled-components';
 
 import StyledHero from '../utils/StyledHero';
-// import HeroImage from '../svg/HeroImage';
+// import HeroImage from '../assets/svg/HeroImage';
 import Button from '../components/Button';
 
 const getBackground = graphql`
   query {
-    BackgroundImage: file(relativePath: { eq: "images/road-bg.jpg" }) {
+    BackgroundImage: file(relativePath: { eq: "assets/images/road-bg.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp
@@ -31,11 +32,11 @@ const HeroSection = () => {
         <TextBox>
           <h1>Web Solutions</h1>
           <p>We create bespoke websites and web applications to solve to solve your needs.</p>
-          <p>
+          <AnchorLink to="/#about-us" title="Our team">
             <Button additionalStyles={{ backgroundColor: 'red', borderRadius: '25px' }}>
               Learn More -- smooth scroll to about us.
             </Button>
-          </p>
+          </AnchorLink>
           <p>Sed fermentum felis ut cursu</p>
         </TextBox>
       </Wrap>

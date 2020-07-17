@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SectionHeading from '../utils/SectionHeading';
-import aboutData from '../data/about-data';
+import aboutData from '../assets/data/about-data';
 
 const AboutUs = () => (
-  <Wrap id="about-us">
+  <section id="about-us">
     <SectionHeading title="Our Values | About Us" />
     <ul>
       <li>Listening:</li>
@@ -22,13 +22,8 @@ const AboutUs = () => (
         </Card>
       ))}
     </ValuesGroup>
-  </Wrap>
+  </section>
 );
-
-const Wrap = styled.section`
-  width: 90vw;
-  margin: 0 auto;
-`;
 
 const ValuesGroup = styled.div`
   display: flex;

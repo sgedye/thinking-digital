@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import processData from '../data/process-data';
+import processData from '../assets/data/process-data';
 import DesignStep from '../components/DesignStep';
 import SectionHeading from '../utils/SectionHeading';
 
