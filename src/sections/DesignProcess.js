@@ -21,8 +21,6 @@ const DesignProcess = () => {
 };
 
 const Wrap = styled.section`
-  width: 80vw;
-  margin: 20px auto;
   @media screen and (min-width: 600px) {
     div:nth-of-type(even) {
       div {

@@ -8,9 +8,15 @@ body {
   scroll-behavior: smooth;
 }
 
-#about-us {
+#about-us, #design-process, #services, #testimonials, #contact-us {
+  min-height: 100vh;
   width: 100vw;
   padding: 50px 5vw;
+  background-color: lightskyblue;
+}
+
+#design-process, #testimonials {
+  background-color: lightpink;
 }
 
 // /* .nav-scrolling {

@@ -1,46 +1,14 @@
 import React from 'react';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import styled from 'styled-components';
 
 const DesktopNav = () => (
-  <NavLinks>
-    <ul id="nav-links" className="navbar-nav mx-auto text-capitalize">
-      <li className="nav-item link">
-        <AnchorLink className="nav-link" to="/">
-          Home
-        </AnchorLink>
-      </li>
-      <li className="nav-item link">
-        <AnchorLink className="nav-link" to="/about-us">
-          About Us | Features
-        </AnchorLink>
-      </li>
-      <li className="nav-item link">
-        <AnchorLink className="nav-link" to="/">
-          Links...
-        </AnchorLink>
-      </li>
-      <li className="nav-item link">
-        <AnchorLink className="nav-link" to="/">
-          Links...
-        </AnchorLink>
-      </li>
-      <li className="nav-item link">
-        <AnchorLink className="nav-link" to="#contactanos">
-          Links...
-        </AnchorLink>
-      </li>
-    </ul>
-  </NavLinks>
+  <nav id="desktop-nav">
+    <AnchorLink className="desktop-link" to="/#about-us" title="About Us" />
+    <AnchorLink className="desktop-link" to="/#design-process" title="Design Process" />
+    <AnchorLink className="desktop-link" to="/#services" title="Services" />
+    <AnchorLink className="desktop-link" to="/#testimonials" title="Testimonials" />
+    <AnchorLink className="desktop-link" to="/#contact-us" title="Contact Us" />
+  </nav>
 );
 
-const NavLinks = styled.nav`
-  color: red;
-  font-weight: bold;
-  ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-  }
-`;
 export default DesktopNav;

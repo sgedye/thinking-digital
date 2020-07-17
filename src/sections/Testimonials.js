@@ -27,13 +27,8 @@ const Testimonials = () => {
 };
 
 const Wrap = styled.section`
-  /* width: 90vw; */
-  /* margin: 20px auto; */
   padding: 25px;
   background-color: #557;
-  @media screen and (min-width: 768px) {
-    /* width: 80vw; */
-  }
 `;
 
 const TestimonialDiv = styled.div`

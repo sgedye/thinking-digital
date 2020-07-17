@@ -29,6 +29,7 @@ const HeroSection = () => {
       alt="Hero Background"
     >
       <Wrap>
+        <span id="top-of-page" />
         <TextBox>
           <h1>Web Solutions</h1>
           <p>We create bespoke websites and web applications to solve to solve your needs.</p>
@@ -51,6 +52,10 @@ const Wrap = styled.section`
   align-items: flex-start;
   width: 100vw;
   height: 100vh;
+  span {
+    position: absolute;
+    top: 80px;
+  }
 
   @media screen and (min-width: 600px) {
     flex-direction: row;
