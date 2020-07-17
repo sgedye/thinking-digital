@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CallToAction = () => (
-  <Wrap className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
+  <Wrap>
     <Contents>
       <h3>Ready to grow your business?</h3>
       <p>Quis lectus nulla at volutpat diam ut.</p>
-      <Button size="xl">Get Started Now</Button>
+      <Button>Get Started Now</Button>
     </Contents>
   </Wrap>
 );

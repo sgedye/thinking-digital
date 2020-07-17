@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SectionHeading from '../../utils/SectionHeading';
-import aboutData from '../../data/about-data';
+import SectionHeading from '../utils/SectionHeading';
+import aboutData from '../data/about-data';
 
 const AboutUs = () => (
   <Wrap id="about-us">

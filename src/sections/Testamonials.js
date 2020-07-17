@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import customerData from '../../data/customer-data';
+import customerData from '../data/customer-data';
 // import CustomerCard from '../CustomerCard';
-import SectionHeading from '../../utils/SectionHeading';
-import TestimonialCard from '../TestimonialCard';
-import DotNav from '../../utils/DotNav';
-// import TestimonialSvg from '../../svg/TestimonialSvg';
+import SectionHeading from '../utils/SectionHeading';
+import TestimonialCard from '../components/TestimonialCard';
+import DotNav from '../utils/DotNav';
+// import TestimonialSvg from '../svg/TestimonialSvg';
 
 const Testamonials = () => {
   const randomCustomer = Math.floor(Math.random() * customerData.length);

@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import StyledHero from '../../utils/StyledHero';
-// import HeroImage from '../../svg/HeroImage';
-import Button from '../Button';
+import StyledHero from '../utils/StyledHero';
+// import HeroImage from '../svg/HeroImage';
+import Button from '../components/Button';
 
 const getBackground = graphql`
   query {

@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import SectionHeading from '../utils/SectionHeading';
-// import Layout from '../components/layout/Layout';
+// import Layout from '../layout/Layout';
 import TestimonialSvg from '../svg/TestimonialSvg';
 
 const NotFound = () => (

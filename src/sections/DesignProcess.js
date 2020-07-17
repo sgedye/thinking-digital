@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import processData from '../../data/process-data';
-import DesignStep from '../DesignStep';
-import SectionHeading from '../../utils/SectionHeading';
+import processData from '../data/process-data';
+import DesignStep from '../components/DesignStep';
+import SectionHeading from '../utils/SectionHeading';
 
 const DesignProcess = () => {
   return (

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+// import AnchorLink from 'react-anchor-link-smooth-scroll';
 import styled from 'styled-components';
 
-import LogoIcon from '../../svg/LogoIcon';
-import DesktopNav from '../../utils/DesktopNav';
-import MobileNav from '../../utils/MobileNav';
+import LogoIcon from '../svg/LogoIcon';
+import DesktopNav from '../utils/DesktopNav';
+import MobileNav from '../utils/MobileNav';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(0);
