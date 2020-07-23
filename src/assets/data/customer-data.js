@@ -1,3 +1,5 @@
+import optica from '../images/customerLogos/optica.png';
+
 export default [
   {
     id: 'testamonial-1',
@@ -6,7 +8,7 @@ export default [
     customerName: 'Liliana Mamian',
     customerTitle: 'Owner and Accountant',
     customerCompany: 'Optica Medica Buga',
-    // customerLogo: '../images/customerLogos/optica.png'
+    // customerLogo: optica    //this works but is a different logo
     customerLogo: 'https://opticamedicabuga.com/img/mobile-menu.png'
   },
   {
@@ -15,7 +17,8 @@ export default [
     customerName: 'Richard Gedye',
     customerTitle: 'Owner and Photographer',
     customerCompany: 'RTG Photography',
-    customerLogo: 'https://rtgphotography.com.au/img/logo-snow-500.png'
+    customerLogo: optica //this works but is a different logo
+    // customerLogo: 'https://rtgphotography.com.au/img/logo-snow-500.png'
   }
   // {
   //   title: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
