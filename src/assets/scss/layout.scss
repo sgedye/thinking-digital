@@ -17,8 +17,27 @@ body {
 
 #design-process, #testimonials {
   background-color: lightpink;
+  // position: relative;
+  // clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%);
+}
+
+#contact-us {
+  background-color: white;
 }
 
 // /* .nav-scrolling {
 //   background-color: lightseagreen;
 // } */
+
+
+.footer {
+  &:before {
+    content: '';
+    display: block;
+    background-image: url('../svg/footer-bg.svg');
+    background-size: cover;
+    width: 100vw;
+    height: 140px;
+  }
+  svg { margin-top: -1px; }
+}
