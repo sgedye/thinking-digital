@@ -5,6 +5,7 @@ module.exports = {
     description: `For all your digial needs`
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
